@@ -1,0 +1,12 @@
+@mixin bg-gradient($start-colour, $end-colour) {
+    background: $start-colour;
+	background:  	-moz-linear-gradient(left, $start-colour 0%, $start-colour 10%, $end-colour 10%, $end-colour 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start-colour),color-stop(10%,$start-colour),color-stop(10%,$end-colour),color-stop(100%,$end-colour));
+   	background: -webkit-linear-gradient(left, $start-colour 0%,$start-colour 10%, $end-colour 10%, $end-colour 100%);
+    background:     -ms-linear-gradient(left, $start-colour 0%,$start-colour 10%, $end-colour 10%, $end-colour 100%);
+    background:      -o-linear-gradient(left, $start-colour 0%,$start-colour 10%, $end-colour 10%, $end-colour 100%);
+    background:         linear-gradient(to right, $start-colour 0%,$start-colour 10%, $end-colour 10%, $end-colour 100%);
+         
+	filter:  progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
+
+}

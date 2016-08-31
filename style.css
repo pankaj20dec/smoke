@@ -33,12 +33,13 @@ ul {
 
 h1, h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 600;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
   letter-spacing: 6px;
+  margin: 0;
 }
 
 h3 {
@@ -64,18 +65,24 @@ h5 {
 }
 
 h6 {
-  margin: 0;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+.common-space {
+  padding: 85px 0;
 }
 
 img {
   max-width: 100%;
 }
 
-.btn-default, .link-button {
+.btn-default, .link-button, .blue-button {
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
   font-style: italic;
@@ -88,7 +95,7 @@ img {
   padding: 8px 0;
   font-size: 16px;
 }
-.btn-default:hover, .link-button:hover {
+.btn-default:hover, .link-button:hover, .blue-button:hover {
   background-color: transparent;
   border: none;
   color: #000000;
@@ -100,6 +107,19 @@ img {
   text-align: center;
   display: block;
   text-decoration: none;
+}
+
+.blue-button {
+  padding: 20px 42px;
+  background: #323642;
+  color: #ffffff !important;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: normal;
+  display: inline-block;
+}
+.blue-button:hover {
+  background: #323642;
 }
 
 .form-control {
@@ -140,12 +160,16 @@ img {
   justify-content: center;
 }
 
-.container {
+.container, .second-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 60px;
   position: relative;
   background: #ffffff;
+}
+
+.second-container {
+  background: transparent;
 }
 
 /***********  top Header **************/
@@ -250,8 +274,135 @@ li.active a:before {
   width: 28px;
 }
 
+/********  Main container ************/
 .main-container {
   background-color: #f7f0e8;
+}
+
+/********  Home apge ************/
+.home-menu .container .common-space, .home-menu .second-container .common-space {
+  padding-bottom: 255px;
+}
+.home-menu .sub-heading {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.home-menu .sub-heading h6 {
+  font-size: 12px;
+}
+.home-menu .row.menu-grid {
+  margin-top: -255px;
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.menu-grid .menu-item {
+  text-align: center;
+  padding: 0 30px;
+}
+.menu-grid .menu-item .menu-button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+}
+.menu-grid .menu-item .number {
+  bottom: -30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  left: -12px;
+  letter-spacing: 12px;
+  position: absolute;
+  transform: rotate(-90deg);
+  font-style: italic;
+  font-weight: normal;
+}
+
+.home-find-us {
+  background: #f7f0e8;
+  background: -moz-linear-gradient(left, #f7f0e8 0%, #f7f0e8 10%, #252525 10%, #252525 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f7f0e8), color-stop(10%, #f7f0e8), color-stop(10%, #252525), color-stop(100%, #252525));
+  background: -webkit-linear-gradient(left, #f7f0e8 0%, #f7f0e8 10%, #252525 10%, #252525 100%);
+  background: -ms-linear-gradient(left, #f7f0e8 0%, #f7f0e8 10%, #252525 10%, #252525 100%);
+  background: -o-linear-gradient(left, #f7f0e8 0%, #f7f0e8 10%, #252525 10%, #252525 100%);
+  background: linear-gradient(to right, #f7f0e8 0%, #f7f0e8 10%, #252525 10%, #252525 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#f7f0e8', end-colourStr='#252525', gradientType='1');
+  position: relative;
+  color: #ffffff;
+  margin-bottom: 250px;
+}
+.home-find-us .find-us-img {
+  /* position: absolute;
+  width: 60%; */
+  background-size: cover !important;
+  min-height: 460px;
+  margin-top: -75px;
+}
+.home-find-us .col-md-7 {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.home-find-us .rss-feeds-container {
+  padding: 85px 45px 0 0;
+  position: absolute;
+  margin-left: -45px;
+}
+.home-find-us .rss-feeds-container .feeds {
+  bottom: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+  width: 100%;
+  bottom: -59%;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+.home-find-us .second-container > .menu-grid.common-space {
+  padding-bottom: 215px;
+}
+.find-us-details {
+  position: relative;
+  padding-top: 50px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.find-us-details .notice {
+  text-transform: lowercase;
+  font-size: 12px;
+  font-style: italic;
+}
+.find-us-details h5 {
+  text-align: center;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+.find-us-details h6 {
+  line-height: 1.2;
+}
+.find-us-details h2 {
+  margin-top: 38px;
+  color: #f4be7c;
+}
+.home-find-us .social-icons {
+  position: absolute;
+  bottom: -90px;
+}
+.home-find-us .social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.home-find-us .social-icons li a {
+  font-size: 18px;
+  color: #323642;
+}
+.home-find-us .find-second-row {
+  padding: 85px 0 50px;
 }
 
 /********** Footer ************/
@@ -268,7 +419,7 @@ li.active a:before {
   height: 100%;
   left: 0;
   position: absolute;
-  width: 65%;
+  width: 56%;
 }
 #footer .subscribe-form {
   flex-wrap: wrap;
@@ -299,7 +450,7 @@ li.active a:before {
 #footer .subscribe-form .navbar-form .form-control:last-child {
   margin-right: 0;
 }
-#footer .subscribe-form .navbar-form .btn-default, #footer .subscribe-form .navbar-form .link-button {
+#footer .subscribe-form .navbar-form .btn-default, #footer .subscribe-form .navbar-form .link-button, #footer .subscribe-form .navbar-form .blue-button {
   color: #ffffff;
   float: right;
 }

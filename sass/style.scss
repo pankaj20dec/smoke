@@ -1,6 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800';
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 @import "variables/variables";
+@import "mixins/mixin";
 
 body{
 	font-family: $body-font;
@@ -30,12 +31,13 @@ ul{
 }
 h1{
 	font-family: $montserrat;
-	font-size: 65px;
+	font-size: 55px;
 	font-weight:  $font-semi-bold;
 	position: relative;
 	z-index: 1;
 	text-transform: uppercase;
 	letter-spacing: 6px;
+	margin: 0;
 }
 h2{
 	@extend h1;
@@ -60,11 +62,16 @@ h5{
 	line-height: 1;
 }
 h6{
-	margin: 0;
 	font-size: 14px;
-	font-family: $body-font;
-	font-weight: $font-semi-bold;
+	font-family: $montserrat;
+	font-weight: $font-bold;
 	text-transform: uppercase;
+	line-height: 2;
+	letter-spacing: 2px;
+	margin: 0 0 10px 0;
+}
+.common-space{
+	padding: 85px 0;
 }
 img{
 	max-width: 100%;
@@ -95,6 +102,19 @@ img{
 	display: block;
 	text-decoration: none;
 	}
+.blue-button{
+	@extend .btn-default;
+	padding: 20px 42px;
+	background: #323642;
+	color: $white !important;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: $font-normal;
+	display: inline-block;
+		&:hover{
+			background: #323642;
+		}
+}	
 .form-control{
 	font-family: $body-font;
 	font-style: $font-normal;
@@ -140,7 +160,10 @@ img{
 	position: relative;
 	background: $white;
 }
-
+.second-container{
+	@extend .container;
+	background: transparent;
+}
 /***********  top Header **************/
 .top-header{
 	position: relative;
@@ -253,9 +276,139 @@ img{
 			}	
 		}
 	}	
+	
+/********  Main container ************/	
 .main-container{
 	background-color: #f7f0e8;
 }	
+/********  Home apge ************/	
+.home-menu{
+	.container{
+		.common-space{
+			padding-bottom: 255px;
+			}
+		}
+	.sub-heading{
+		text-transform: uppercase;
+		font-size: $secondry-fontsize;
+			h6{
+				font-size: $secondry-fontsize;
+			}
+		}
+		.row.menu-grid {
+			margin-top: -255px;
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+	}
+	.menu-grid{
+		.menu-item {
+			text-align: center;
+			padding: 0 30px;
+			.menu-button{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -25px;
+			}
+			.number {
+				bottom: -30px;
+				font-family: $montserrat;
+				font-size: 50px;
+				left: -12px;
+				letter-spacing: 12px;
+				position: absolute;
+				transform: rotate(-90deg);
+				font-style: $font-italic;
+				font-weight: $font-normal;
+			}
+		}
+	}
+
+.home-find-us{
+	@include bg-gradient(#f7f0e8,#252525);
+	position: relative;
+	color: $white;
+	margin-bottom: 250px;
+	.find-us-img{
+		/* position: absolute;
+		width: 60%; */
+		background-size: cover !important;
+		min-height: 460px;
+		margin-top: -75px;
+	}
+	.col-md-7 {
+			padding-left: 0;
+			padding-right: 30px;
+		}
+	.rss-feeds-container {
+		padding: 85px 45px 0 0;
+		position: absolute;
+		margin-left: -45px;
+		.feeds {
+			bottom: 0;
+			display: block;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			transform: rotate(90deg);
+			width: 100%;
+			bottom: -59%;
+			display: block;
+			font-size: $secondry-fontsize;
+			font-weight: $font-bold;
+			margin-right: 15px;
+			text-transform: uppercase;
+		}
+	}
+	.second-container {
+		> .menu-grid{
+			&.common-space {
+				padding-bottom: 215px;
+				@at-root .find-us-details{
+					position: relative;
+					padding-top: 50px;
+					line-height: 1.2;
+					text-transform: uppercase;
+					.notice{
+						text-transform: lowercase;
+						font-size: $secondry-fontsize;
+						font-style: $font-italic;
+					}
+					h5{
+						text-align: center;
+						font-style: $font-italic;
+						font-weight: $font-normal;
+						letter-spacing: 3px;
+					}
+					h6{
+						line-height: 1.2;
+					}
+					h2{
+						margin-top: 38px;
+						color: #f4be7c;
+					}
+				}
+			}
+		}
+	}
+	.social-icons{
+		position: absolute;
+		bottom: -90px;
+		li{
+			display: inline-block;
+			margin-right: 20px;
+			a{
+				font-size: 18px;
+				color: #323642;
+			}
+		}
+	}
+.find-second-row{
+	padding: 85px 0 50px;
+}	
+	
+}		
 
 	
 	
@@ -271,7 +424,7 @@ img{
 					height: 100%;
 					left: 0;
 					position: absolute;
-					width: 65%;
+					width: 56%;
 					
 				}
 		}
