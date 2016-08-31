@@ -404,12 +404,23 @@ img{
 			}
 		}
 	}
-.find-second-row{
-	padding: 85px 0 50px;
-}	
-	
+	.find-second-row{
+		padding: 85px 0 50px;
+	}	
 }		
 
+
+/**************  Gallery   ********************/
+
+.gallery{
+	margin: 0 -8px;
+	padding-top: 85px;
+		li{
+			width: 25%;
+			float: left;
+			padding: 8px;
+		}
+	}	
 	
 	
 /********** Footer ************/

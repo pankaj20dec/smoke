@@ -405,6 +405,17 @@ li.active a:before {
   padding: 85px 0 50px;
 }
 
+/**************  Gallery   ********************/
+.gallery {
+  margin: 0 -8px;
+  padding-top: 85px;
+}
+.gallery li {
+  width: 25%;
+  float: left;
+  padding: 8px;
+}
+
 /********** Footer ************/
 #footer {
   background-color: #f7f0e8;
