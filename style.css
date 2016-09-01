@@ -51,8 +51,9 @@ h3 {
 h4 {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  font-weight: 600;
-  margin-top: 30px;
+  font-weight: normal;
+  margin-top: 50px;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -71,7 +72,7 @@ h6 {
   text-transform: uppercase;
   line-height: 2;
   letter-spacing: 2px;
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
 .common-space {
@@ -172,12 +173,32 @@ img {
   background: transparent;
 }
 
+.page-content {
+  padding-top: 60px;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
 /***********  top Header **************/
+.home .logo img {
+  width: auto;
+}
+
 .top-header {
   position: relative;
 }
 .top-header .header-banner {
   background-size: cover !important;
+  min-height: 230px;
+}
+.logo img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 62%;
 }
 .top-header .top-bar {
   position: absolute;
@@ -299,6 +320,7 @@ li.active a:before {
 .menu-grid .menu-item {
   text-align: center;
   padding: 0 30px;
+  margin-bottom: 60px;
 }
 .menu-grid .menu-item .menu-button {
   position: absolute;
@@ -405,12 +427,198 @@ li.active a:before {
   padding: 85px 0 50px;
 }
 
-/**************  Gallery   ********************/
-.gallery {
-  margin: 0 -8px;
-  padding-top: 85px;
+/*************  Pages  ************************/
+.page-wrapper .question-answer {
+  border-top: 1px solid;
 }
-.gallery li {
+.page-wrapper .question-answer h6 {
+  margin-bottom: 0;
+  line-height: 4;
+  cursor: pointer;
+}
+.page-wrapper .question-answer h6 .plus {
+  float: right;
+}
+.page-wrapper .question-answer h6 .plus:before {
+  content: "+";
+}
+.page-wrapper .question-answer h6 .plus.minus:before {
+  content: "-";
+}
+.page-wrapper .question-answer .answer {
+  padding: 20px 0;
+  display: none;
+}
+.page-wrapper .question-answer:last-child {
+  border-bottom: 1px solid #000000;
+}
+.page-wrapper .short-description {
+  padding: 40px 0 0;
+}
+.page-wrapper .short-description h6 {
+  font-size: 12px;
+}
+.page-wrapper .contact-form .navbar-form {
+  padding-left: 0;
+}
+.page-wrapper .contact-form input {
+  background: #ebebeb none repeat scroll 0 0;
+  float: left;
+  margin-bottom: 2.3%;
+  margin-right: 2.3%;
+  width: 47.7% !important;
+  height: 35px;
+}
+.page-wrapper .contact-form textarea {
+  width: 97.7%;
+  border: 0;
+  background: #ebebeb none repeat scroll 0 0;
+  margin-right: 2.3%;
+}
+.page-wrapper .contact-form .btn-default, .page-wrapper .contact-form .link-button, .page-wrapper .contact-form .blue-button {
+  float: right;
+  margin-right: 2.3%;
+}
+.page-wrapper .address-details {
+  line-height: 2;
+  text-transform: uppercase;
+}
+.page-wrapper .contact-details {
+  padding-top: 30px;
+  text-transform: uppercase;
+  line-height: 2;
+  font-style: italic;
+}
+.page-wrapper .location-map {
+  padding-right: 15px;
+}
+.page-wrapper .about-content {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+.page-wrapper .about-images {
+  padding-top: 80px;
+}
+.page-wrapper .about-images .small-img {
+  margin-left: -120px;
+  margin-top: 100px;
+}
+.page-wrapper .about-images img {
+  width: 100%;
+}
+
+/**************  Listing page  ************/
+.listing-page .short-description {
+  padding: 40px 0;
+}
+.listing-page .listing-container {
+  border-top: 1px solid;
+}
+.listing-page .listing-container .listing-details {
+  padding: 0 60px;
+}
+.listing-page .listing-container .listing-details .listing-grid {
+  margin-bottom: 45px;
+}
+.listing-page .listing-container .listing-img {
+  position: relative;
+}
+.listing-page .listing-container .listing-img h4 {
+  padding-left: 35px;
+}
+.listing-page .listing-container .listing-img .number {
+  top: -5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  left: -45px;
+  letter-spacing: 12px;
+  position: absolute;
+  transform: rotate(-90deg);
+  font-style: italic;
+  font-weight: normal;
+}
+.listing-page .listing-container .listing-img .menu-button {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+}
+.listing-page .listing-container .listing-img .menu-button .blue-button {
+  padding: 25px;
+  font-size: 14px;
+}
+.listing-page .listing-container .listing-info {
+  align-items: center;
+  background: #fff none repeat scroll 0 0;
+  margin: 120px 0 0 -240px;
+  padding: 20px 120px 20px 20px;
+}
+.listing-page .listing-container .right-content .listing-img .number {
+  left: 100%;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.listing-page .listing-container .right-content .listing-img h4 {
+  text-align: right;
+  padding-right: 40px;
+}
+.listing-page .listing-container .right-content .listing-img .menu-button {
+  left: auto;
+  right: 20px;
+}
+.listing-page .listing-container .right-content .listing-info {
+  margin: 120px -240px 0 0;
+  padding: 20px 20px 20px 120px;
+}
+.listing-page .listing-container.blog-listing .listing-img {
+  padding-left: 15px;
+  text-align: center;
+}
+.listing-page .listing-container.blog-listing .listing-img h4 {
+  padding: 0;
+  font-style: italic;
+}
+.listing-page .listing-container.blog-listing .listing-img .info {
+  padding: 30px 45px;
+  text-align: left;
+  margin: -60px 25px 0;
+  background: #ffffff;
+  position: relative;
+}
+.listing-page .listing-container.blog-listing .listing-img .info .link-button {
+  font-size: 14px;
+  margin-top: 25px;
+}
+.listing-page .listing-container.blog-listing .listing-img .post-categories {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+.listing-page .listing-container.blog-listing .listing-img .post-categories ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+.listing-page .categories {
+  padding: 20px 0;
+}
+.listing-page .categories ul li {
+  padding-right: 45px;
+  display: inline-block;
+}
+.listing-page .categories ul li a {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/**************  Gallery   ********************/
+.gallery-ul {
+  margin: 0 -8px;
+}
+.gallery-ul li {
   width: 25%;
   float: left;
   padding: 8px;

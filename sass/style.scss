@@ -50,8 +50,9 @@ h3{
 h4{	
 	font-family: $body-font;
 	font-size: 20px;
-	font-weight: $font-semi-bold;
-	margin-top: 30px;
+	font-weight: $font-normal;
+	margin-top: 50px;
+	text-transform: uppercase;
 }
 h5{
 	font-family: $body-font;
@@ -68,7 +69,7 @@ h6{
 	text-transform: uppercase;
 	line-height: 2;
 	letter-spacing: 2px;
-	margin: 0 0 10px 0;
+	margin: 0;
 }
 .common-space{
 	padding: 85px 0;
@@ -164,11 +165,34 @@ img{
 	@extend .container;
 	background: transparent;
 }
+.page-content{
+	padding-top: 60px;
+}
+.col-centered{
+	float: none;
+	margin: 0 auto;
+	}
 /***********  top Header **************/
+.home{
+	.logo{
+		img{
+			width: auto;
+		}
+	}
+}
 .top-header{
 	position: relative;
 	.header-banner{
 		background-size: cover !important;
+		min-height: 230px;
+			@at-root .logo{
+					img{ 
+						display: block;
+						height: auto;
+						margin: 0 auto;
+						width: 62%;
+					}
+			}
 	}
 	.top-bar{
 		position: absolute;
@@ -305,6 +329,7 @@ img{
 		.menu-item {
 			text-align: center;
 			padding: 0 30px;
+			margin-bottom: 60px;
 			.menu-button{
 				position: absolute;
 				left: 0;
@@ -409,12 +434,216 @@ img{
 	}	
 }		
 
+/*************  Pages  ************************/
+.page-wrapper{
+	.question-answer{
+		border-top: 1px solid;
+		h6{
+			margin-bottom: 0;
+			line-height: 4;
+			cursor: pointer;
+			.plus{
+				float: right;
+				&:before{
+					content: "+";
+				}
+				&.minus{
+					&:before{
+						content: "-";
+					}
+				}
+			}
+		}
+		.answer{
+			padding: 20px 0;
+			display: none;
+		}
+		&:last-child{
+			border-bottom: 1px solid $black;
+		}
+	}
+	.short-description{
+		padding: 40px 0 0;
+			h6{
+				font-size: $secondry-fontsize;
+			}
+	}
+	.contact-form {
+		.navbar-form{
+			padding-left: 0;
+		}
+		input {
+			background: #ebebeb none repeat scroll 0 0;
+			float: left;
+			margin-bottom: 2.3%;
+			margin-right: 2.3%;
+			width: 47.7% !important;
+			height: 35px;
+		}
+		textarea{
+			width: 97.7%;
+			border: 0;
+			background: #ebebeb none repeat scroll 0 0;
+			margin-right: 2.3%;
+		}
+		.btn-default{
+			float: right;
+			margin-right: 2.3%;
+		}
+	}	
+	.address-details{
+		line-height: 2;
+		text-transform: uppercase;
+	}
+	.contact-details{
+		padding-top: 30px;
+		text-transform: uppercase;
+		line-height: 2;
+		font-style: $font-italic;	
+	}
+	.location-map{
+		padding-right: 15px;
+	}
+	.about-content{
+		 -webkit-column-count: 2; 
+		 -moz-column-count: 2; 
+			column-count: 2;
+	}
+	.about-images{
+		padding-top: 80px;
+		.small-img {
+			margin-left: -120px;
+			margin-top: 100px;
+		}
+		img{
+			width: 100%;
+		}
+	}
+}
+/**************  Listing page  ************/
+.listing-page{
+	.short-description{
+		padding: 40px 0;
+	}
+	.listing-container{
+		border-top: 1px solid;
+			.listing-details{
+				padding: 0 60px;
+				.listing-grid{
+					margin-bottom: 45px;
+				}
+			}
+			.listing-img{
+				position: relative;
+				  h4{
+						padding-left: 35px;
+					}
+					.number {
+						top: -5px;
+						font-family: $montserrat;
+						font-size: 50px;
+						left: -45px;
+						letter-spacing: 12px;
+						position: absolute;
+						transform: rotate(-90deg);
+						font-style: $font-italic;
+						font-weight: $font-normal;
+					}
+				.menu-button{
+					position: absolute;
+					bottom: -30px;
+					left: 20px;
+					.blue-button{
+						padding: 25px;
+						font-size: 14px;
+					}
+				}	
+			}
+			.listing-info {
+				align-items: center;
+				background: #fff none repeat scroll 0 0;
+				margin: 120px 0 0 -240px;
+				padding: 20px 120px 20px 20px;
+			}
+			.right-content{
+					.listing-img{
+						.number{
+							left: 100%;
+							position: absolute;
+							right: 0;
+							top: 40px;
+						}
+						h4{
+							text-align: right;
+							padding-right: 40px;
+						}
+						.menu-button{
+							left: auto;
+							right: 20px;
+						}
+					}
+				.listing-info{
+					margin: 120px -240px 0 0;
+					padding: 20px 20px 20px 120px;
+				}	
+			}
+			&.blog-listing{
+				.listing-img{
+					padding-left: 15px;
+					text-align: center;
+						h4{
+							padding: 0;
+							font-style: $font-italic;
+						}
+						.info{
+							padding: 30px 45px;
+							text-align: left;
+							margin: -60px 25px 0;
+							background: $white;
+							position: relative;
+							.link-button{
+								font-size: $body-fontsize;
+								margin-top: 25px;
+							}	
+						}
+						.post-categories{
+								height: 100%;
+								left: 0;
+								position: absolute;
+								top: 0;
+								transform: rotate(-90deg);
+								width: 100%;
+							ul{
+								li{
+									display: inline-block;
+									margin-right: 20px;
+								}
+							}	
+						}						
+					}
+				}	
+		}
+		.categories{
+				padding: 20px 0;
+				ul{
+					li{
+						padding-right: 45px;
+						display: inline-block;
+						a{
+							font-size: $secondry-fontsize;
+							font-style: $font-italic;
+						}
+					}
+				}
+			}
+}
+
+
 
 /**************  Gallery   ********************/
 
-.gallery{
+.gallery-ul{
 	margin: 0 -8px;
-	padding-top: 85px;
 		li{
 			width: 25%;
 			float: left;
