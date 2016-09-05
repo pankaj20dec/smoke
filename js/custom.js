@@ -6,12 +6,13 @@ var wheight,smoke;
 		},
 		accordion: function(){
 			$('.question-answer h6').click(function(){
-				$('.question-answer h6').parent().find('.answer').removeClass('active').slideUp(500);
-				$('.question-answer h6').find('.plus').removeClass('minus');
+				
 				if($(this).parent().find('.answer').hasClass('active')){
 					$(this).parent().find('.answer').removeClass('active').slideUp(500);
 					$(this).find('.plus').removeClass('minus');
 				}else{
+					$('.question-answer h6').parent().find('.answer').removeClass('active').slideUp(500);
+					$('.question-answer h6').find('.plus').removeClass('minus');
 					$(this).parent().find('.answer').addClass('active').slideDown(500);
 					$(this).find('.plus').addClass('minus');
 				}
