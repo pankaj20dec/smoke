@@ -22,8 +22,8 @@ var wheight,smoke;
 	$(document).ready(function(){
 		smoke.sizes();
 		smoke.accordion();
-		if($('.gallery').length){
-			$(".gallery a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:400, autoplay_slideshow: false});
+		if($('.gallery-ul').length){
+			$(".gallery-ul a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:400, autoplay_slideshow: false});
 		}
 		
 	});
